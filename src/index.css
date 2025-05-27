@@ -139,3 +139,22 @@ textarea:focus-visible {
   outline: 2px solid #22d3ee;
   outline-offset: 2px;
 }
+
+.linear-wipe {
+  background: linear-gradient(to right, #00ff00 20%, #00cc00 40%, #00cc00 60%, #00ff00 80%);
+  background-size: 200% auto;
+  color: #000;
+
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shine 1.5s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
