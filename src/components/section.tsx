@@ -4,7 +4,7 @@ import Badge from "./ui/Badge";
 const Section = () => {
   return (
     <main className="min-h-screen bg-black text-white">
-      <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden">
+      <section id="about" className="relative py-20 md:py-32 lg:py-40 overflow-hidden">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12 md:gap-20">
           <div className="flex-1 space-y-6 z-10">
             <Badge
@@ -38,15 +38,15 @@ const Section = () => {
             </div>
             <div className="flex gap-4 pt-6">
               {[
-                { icon: Github, href: "https://github.com", label: "GitHub" },
+                { icon: Github, href: "https://github.com/DevPatel1023", label: "GitHub" },
                 {
                   icon: Linkedin,
-                  href: "https://linkedin.com",
+                  href: "https://www.linkedin.com/in/patel-dev-02513b26a/",
                   label: "LinkedIn",
                 },
                 {
                   icon: Mail,
-                  href: "mailto:contact@example.com",
+                  href: "mailto:work.devpatel19046@example.com",
                   label: "Email",
                 },
               ].map(({ icon: Icon, href, label }) => (
@@ -86,6 +86,7 @@ const Section = () => {
       </section>
 
       {/* About Section */}
+
     </main>
   );
 };
