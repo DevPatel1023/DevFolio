@@ -12,7 +12,7 @@ const Image: React.FC<ImageProps> = ({ src, alt, fill, className = '' }) => (
   <img
     src={src}
     alt={alt}
-    className={`${fill ? 'absolute inset-0 w-full h-full' : ''} ${className}`}
+    className={`${fill ? 'absolute inset-0 w-full object-contain h-full' : ''} ${className}`}
   />
 );
 
