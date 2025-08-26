@@ -1,7 +1,8 @@
 const TopBanner = ({}) => {
   return (
     <div>
-        top banner
+        {/* banner img */}
+        <img src="" alt="banner-img" />
     </div>
   )
 }
