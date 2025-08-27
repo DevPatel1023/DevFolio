@@ -2,7 +2,7 @@ import TopBanner from "../components/TopBanner"
 
 const MainSection = () => {
   return (
-    <div className="w-4xl min-h-screen flex justify-center">
+    <div className="md:w-4xl w-full flex justify-center mx-auto px-4">
         {/* top banner */}
         <TopBanner />
     </div>
