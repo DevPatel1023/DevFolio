@@ -11,11 +11,18 @@ const NavBar = () => {
       <div className="flex justify-between gap-3 right-2 text-zinc-500 ease-in-out">
         <p className="hover:text-zinc-100 transition-colors duration-300 hover:cursor-pointer">
           <span className="hidden md:inline-block">proof-of-work</span>
-          <span className="md:hidden
-           inline-block">POW</span>
+          <span
+            className="md:hidden
+           inline-block"
+          >
+            POW
+          </span>
         </p>
         <p className="hover:text-zinc-100 transition-colors duration-300 hover:cursor-pointer">
-          Resume
+          <a href="https://docs.google.com/document/d/1hx0PxTsSoS16UsImJnPCAu6sWmaTdo1W/edit?usp=drive_link&ouid=114180167688581962900&rtpof=true&sd=true"
+          target="_blank">
+            Resume
+          </a>
         </p>
       </div>
     </div>
