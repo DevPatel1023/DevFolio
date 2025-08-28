@@ -2,12 +2,29 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const TopBanner = () => {
+  // states for staggered animation
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+
+  useEffect(() => {
+    // Stagger each element's visibility
+    const timeout = setTimeout(() => setIsVisible(true), 100);
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <div className="w-full">
       {/* img banner */}
-      <div className="relative w-full h-[250px] overflow-hidden border border-zinc-900">
+
+      <div
+        className={`relative w-full h-[250px] overflow-hidden border border-zinc-900 
+          transition-all duration-700 ease-out 
+          ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
+      >
         <Image
           src="/img4.jpg"
           alt="banner-img"
@@ -19,16 +36,29 @@ const TopBanner = () => {
       </div>
 
       {/* avtar */}
-      <Avatar className="h-[150px] w-[150px]">
+      <Avatar
+        className={`
+          transition-all duration-700 ease-out delay-200 h-[150px] w-[150px]
+          ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
+        `}
+      >
         <AvatarImage src="/profile.png" />
         <AvatarFallback className="text-2xl">DP</AvatarFallback>
       </Avatar>
 
       {/* name and info and socials */}
-      <div className="flex flex-row justify-between w-full px-4 items-start">
+      <div className="flex md:flex-row flex-col md:justify-between w-full items-start">
         {/* LEFT side: name, info */}
-        <div className="flex flex-col">
-          <h1 className="text-2xl pt-4">Patel Dev</h1>
+        <div
+          className={`transition-all duration-700 ease-out
+            ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-4"
+            }
+          `}
+        >
+          <h1 className="text-2xl pt-2">Patel Dev</h1>
           <p className="text-zinc-500">
             <span>22 • </span>
             <span>CSE • </span>
@@ -38,7 +68,15 @@ const TopBanner = () => {
         </div>
 
         {/* RIGHT side: socials */}
-        <div className="flex gap-4 items-center pt-4">
+        <div
+          className={`flex md:gap-4 gap-6 items-center pt-4 transition-all duration-700 ease-out
+            ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-4"
+            }
+          `}
+        >
           {/* GitHub */}
           <a
             href="https://github.com/DevPatel1023"
@@ -57,7 +95,7 @@ const TopBanner = () => {
             >
               <path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.193 10.193 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11Z" />
             </svg>
-            {/* twitter */}
+            {/* x */}
           </a>
           <a
             href="https://x.com/PatelDev1023"
@@ -77,15 +115,25 @@ const TopBanner = () => {
             </svg>
           </a>
           {/* gmail */}
-          <a  href="mailto:devp4143@gmail.com"
+          <a
+            href="mailto:devp4143@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            >
-            <img src="/gmail.png" alt="gmail-logo" className="h-10 w-auto" />
+          >
+            {/* <img src="/gmail.png" alt="gmail-logo" className="h-10 w-auto" /> */}
+            <Image
+              src="/gmail.png"
+              alt="gmail-logo"
+              width={40}
+              height={40}
+              unoptimized
+            />
           </a>
-          <a  href="https://www.linkedin.com/in/patel-dev-02513b26a/"
+          <a
+            href="https://www.linkedin.com/in/patel-dev-02513b26a/"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 34 34"
@@ -100,6 +148,11 @@ const TopBanner = () => {
             </svg>
           </a>
         </div>
+      </div>
+      {/* designation */}
+      <div className="pb-2">
+      <p className="text-zinc-500 pt-6">Full Stack Developer | AI Enthusiast</p>
+      <p>Building digital products with a problem-first mindset — <span className="text-zinc-500">using structured thinking and modern tools to craft clean, scalable solutions</span></p>
       </div>
     </div>
   );
