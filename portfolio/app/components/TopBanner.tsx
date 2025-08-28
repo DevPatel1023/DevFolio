@@ -166,8 +166,8 @@ const TopBanner = () => {
       {/* about */}
       <div className="mt-3">
         <h1 className="pb-2 shimmer text-zinc-500 text-xl font-serif font-medium tracking-tight overflow-hidden shine">
-        Introduction
-      </h1>
+          Introduction
+        </h1>
         <p className="text-zinc-500 text-sm">
           I’m an average developer who writes code —
           <span className="text-white">
@@ -179,9 +179,9 @@ const TopBanner = () => {
           <span className="text-red-400">Lately </span>, my focus has been on
           <span className="text-blue-400"> AI-integrated systems</span>. I’m
           actively learning and applying AI to build smarter, more adaptive
-          features that enhance both user experience and functionality.
-          <span className="text-white">I build from the core</span>. I work
-          across the entire development lifecycle — from design to deployment —
+          features that enhance both user experience and functionality. I work
+          across the entire development lifecycle —{" "}
+          <span className="text-white">from design to deployment </span>— 
           and I don’t stop there. I believe in continuously monitoring,
           refining, and evolving products to keep them aligned with real-world
           needs.
