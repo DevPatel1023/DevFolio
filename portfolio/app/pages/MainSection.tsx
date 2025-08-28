@@ -1,10 +1,12 @@
+import Experience from "../components/Experience"
 import TopBanner from "../components/TopBanner"
 
 const MainSection = () => {
   return (
-    <div className="md:w-4xl w-full flex justify-center mx-auto px-4 border border-zinc-800">
+    <div className="md:w-4xl w-full flex flex-col justify-center mx-auto px-7 border border-zinc-900">
         {/* top banner */}
         <TopBanner />
+        <Experience />
     </div>
   )
 }
