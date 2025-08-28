@@ -15,11 +15,11 @@ const TopBanner = () => {
   }, []);
 
   return (
-    <div className="w-full">
+    <div className="w-full border border-zinc-900 ">
       {/* img banner */}
 
       <div
-        className={`relative w-full h-[250px] overflow-hidden border border-zinc-900 
+        className={`relative w-full h-[250px] overflow-hidden border-zinc-800
           transition-all duration-700 ease-out 
           ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
@@ -38,7 +38,7 @@ const TopBanner = () => {
       {/* avtar */}
       <Avatar
         className={`
-          transition-all duration-700 ease-out delay-200 h-[150px] w-[150px]
+          transition-all duration-700 ease-out delay-200 h-[150px] w-[150px] border border-zinc-800
           ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
         `}
       >
@@ -149,10 +149,43 @@ const TopBanner = () => {
           </a>
         </div>
       </div>
-      {/* designation */}
-      <div className="pb-2">
-      <p className="text-zinc-500 pt-6">Full Stack Developer | AI Enthusiast</p>
-      <p>Building digital products with a problem-first mindset — <span className="text-zinc-500">using structured thinking and modern tools to craft clean, scalable solutions</span></p>
+      {/* designation and headline */}
+      <div className="pb-2 mt-6">
+        <p className="text-zinc-500 pb-3">
+          Full Stack Developer | AI Enthusiast
+        </p>
+        <p>
+          Building digital products with a problem-first mindset —{" "}
+          <span className="text-zinc-500">
+            using structured thinking and modern tools to craft clean, scalable
+            solutions
+          </span>
+        </p>
+      </div>
+
+      {/* about */}
+      <div className="mt-3">
+        <h1 className="pb-2 shimmer text-zinc-500 text-xl font-serif font-medium tracking-tight overflow-hidden shine">
+        Introduction
+      </h1>
+        <p className="text-zinc-500 text-sm">
+          I’m an average developer who writes code —
+          <span className="text-white">
+            {" "}
+            but what sets me apart is how I approach problems
+          </span>
+          . I dive deep to understand the root issues and craft solutions that
+          truly move the product forward.{" "}
+          <span className="text-red-400">Lately </span>, my focus has been on
+          <span className="text-blue-400"> AI-integrated systems</span>. I’m
+          actively learning and applying AI to build smarter, more adaptive
+          features that enhance both user experience and functionality.
+          <span className="text-white">I build from the core</span>. I work
+          across the entire development lifecycle — from design to deployment —
+          and I don’t stop there. I believe in continuously monitoring,
+          refining, and evolving products to keep them aligned with real-world
+          needs.
+        </p>
       </div>
     </div>
   );
