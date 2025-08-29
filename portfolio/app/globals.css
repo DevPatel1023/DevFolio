@@ -119,6 +119,19 @@
    }
 }
 
+
+/* dark gray stripe */
+
+.diagonal-stripes {
+      background-image: repeating-linear-gradient(
+        45deg,
+        #18181b,
+        #18181b 0.5px,
+        #000 2px,        
+        #000 8px  
+      );
+    }
+
 /* text shinning effect */
 
 .shimmer {

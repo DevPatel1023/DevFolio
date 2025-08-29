@@ -15,7 +15,7 @@ const TopBanner = () => {
   }, []);
 
   return (
-    <div className="w-full border border-zinc-900">
+    <div className="w-full bg-background border border-zinc-900">
       {/* img banner - full width */}
       <div
         className={`relative w-full h-[250px] overflow-hidden border-zinc-800
