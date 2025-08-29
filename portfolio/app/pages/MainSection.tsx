@@ -1,3 +1,4 @@
+import ContributionsGithub from "../components/ContributionsGithub"
 import Experience from "../components/Experience"
 import TopBanner from "../components/TopBanner"
 
@@ -7,6 +8,8 @@ const MainSection = () => {
         {/* top banner */}
         <TopBanner />
         <Experience />
+        <ContributionsGithub username="DevPatel1023" 
+        />
     </div>
   )
 }
