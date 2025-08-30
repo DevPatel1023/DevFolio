@@ -5,10 +5,10 @@ import AnimatedShimmerText from "./AnimatedShimmerText";
 const Experience = () => {
   return (
     <div className="w-full bg-background border border-zinc-900">
-      <h1 className="px-3 shimmer mt-3 text-zinc-500 text-xl font-serif font-medium tracking-tight overflow-hidden shine">
-        Professional Experience
-      </h1>
-
+      <div className="px-3">
+      <AnimatedShimmerText text="Professional Experience" />
+      </div>
+        
       {/* adding companies details */}
       <div className="flex flex-col mt-3 px-3">
         {/* company-1 */}
