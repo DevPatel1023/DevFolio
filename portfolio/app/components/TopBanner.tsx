@@ -194,23 +194,33 @@ const TopBanner = () => {
           `}
         >
           <AnimatedShimmerText text="Introduction" />
-          <p className="text-zinc-500 text-sm">
-            I'm an average developer who writes code —
-            <span className="text-white">
-              {" "}
-              but what sets me apart is how I approach problems
-            </span>
-            . I dive deep to understand the root issues and craft solutions that
-            truly move the product forward.{" "}
-            <span className="text-red-400">Lately </span>, my focus has been on
-            <span className="text-blue-400"> AI-integrated systems</span>. I'm
-            actively learning and applying AI to build smarter, more adaptive
-            features that enhance both user experience and functionality. I work
-            across the entire development lifecycle —{" "}
-            <span className="text-white">from design to deployment </span>— and
-            I don't stop there. I believe in continuously monitoring, refining,
-            and evolving products to keep them aligned with real-world needs.
-          </p>
+          <div className="space-y-2">
+            <p className="text-zinc-500 text-sm">
+              I'm an average developer who writes code —
+              <span className="text-white">
+                {" "}
+                but what sets me apart is how I approach problems
+              </span>
+              . I dive deep to understand the root issues and craft solutions
+              that truly move the product forward.{" "}
+              <span className="text-red-400">Lately </span>, my focus has been
+              on
+              <span className="text-blue-400 pb-2"> AI-integrated systems</span>
+              .
+            </p>
+            <p className="text-zinc-500 text-sm">
+              I'm actively learning and applying AI to build smarter, more
+              adaptive features that enhance both user experience and
+              functionality.
+            </p>
+            <p className="text-zinc-500 text-sm">
+              I work across the entire development lifecycle —{" "}
+              <span className="text-white">from design to deployment </span>—
+              and I don't stop there. I believe in continuously monitoring,
+              refining, and evolving products to keep them aligned with
+              real-world needs.
+            </p>
+          </div>
         </div>
       </div>
     </div>

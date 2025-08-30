@@ -10,7 +10,7 @@ const Experience = () => {
       </div>
         
       {/* adding companies details */}
-      <div className="flex flex-col mt-3 px-3">
+      <div className="flex flex-col px-3 pb-3">
         {/* company-1 */}
         <div className="flex justify-between py-2 items-center">
           <div className="flex flex-row gap-3">
@@ -36,7 +36,7 @@ const Experience = () => {
             </Avatar>
             <div className="flex flex-col">
               <h1 className="hover:text-blue-400 cursor-pointer">Tech. Elecon Pvt.Ltd</h1>
-              <p className="text-sm text-zinc-500">Frontend developer Intern</p>
+              <p className="text-sm text-zinc-500">Frontend developer & Tech lead Intern</p>
             </div>
           </div>
           <p className="text-sm text-zinc-500">May 2024 - June 2024</p>
@@ -44,9 +44,9 @@ const Experience = () => {
       </div>
 
       {/* details about contributions */}
-      <div className="bg-zinc-900 px-3 text-zinc-500">
+      <div className="bg-zinc-900 mt-1 px-3 text-zinc-500">
         <AnimatedShimmerText text="Technical Contributions" />
-        <p className="text-sm py-2">
+        <p className="text-sm space-y-2">
           <span className="text-white">At Elecon</span>, I contributed to the
           Quoteflow project, <span className="text-white">working across the frontend, backend, and database
           layers</span>. On the frontend, I implemented responsive UI components and

@@ -8,7 +8,7 @@ const RecentContributions = () => {
     <div className="w-full bg-background border border-zinc-900 px-3"> 
       <div className="flex flex-row gap-3 items-center">
         <AnimatedShimmerText text="Recent Contributions till" />
-        <p className="text-zinc-500 ">
+        <p className="text-zinc-500 text-medium">
           <span>●</span>Aug 30 2025
         </p>
       </div>
