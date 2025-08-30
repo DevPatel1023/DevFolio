@@ -3,6 +3,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import AnimatedShimmerText from "./AnimatedShimmerText";
 
 const TopBanner = () => {
   // states for staggered animation
@@ -180,11 +181,11 @@ const TopBanner = () => {
       {/* about section with padding */}
       <div className="px-4 bg-[#141414]">
         {/* Subtle separator above Introduction */}
-        <div className="w-full mt-6 mb-4">
+        <div className="w-full mt-6">
           <div className="w-full h-px bg-gradient-to-r from-transparent via-zinc-600/40 to-transparent"></div>
         </div>
         <div
-          className={`mt-3 pb-4 transition-all duration-900 ease-out delay-200 
+          className={` pb-4 transition-all duration-900 ease-out delay-200 
             ${
               isVisible
                 ? "opacity-100 translate-y-0"
@@ -192,9 +193,7 @@ const TopBanner = () => {
             }
           `}
         >
-          <h1 className="pb-2 shimmer text-zinc-500 text-xl font-serif font-medium tracking-tight overflow-hidden">
-            Introduction
-          </h1>
+          <AnimatedShimmerText text="Introduction" />
           <p className="text-zinc-500 text-sm">
             I'm an average developer who writes code —
             <span className="text-white">

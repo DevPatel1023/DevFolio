@@ -1,5 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import React from "react";
+import AnimatedShimmerText from "./AnimatedShimmerText";
 
 const Experience = () => {
   return (
@@ -18,7 +19,7 @@ const Experience = () => {
               <AvatarFallback className="text-2xl">Tech.Elecon</AvatarFallback>
             </Avatar>
             <div className="flex flex-col">
-              <h1>Tech. Elecon Pvt.Ltd</h1>
+              <h1 className="hover:text-blue-400 cursor-pointer">Tech. Elecon Pvt.Ltd</h1>
               <p className="text-sm text-zinc-500">
                 Full stack developer Intern
               </p>
@@ -34,7 +35,7 @@ const Experience = () => {
               <AvatarFallback className="text-2xl">Tech.Elecon</AvatarFallback>
             </Avatar>
             <div className="flex flex-col">
-              <h1>Tech. Elecon Pvt.Ltd</h1>
+              <h1 className="hover:text-blue-400 cursor-pointer">Tech. Elecon Pvt.Ltd</h1>
               <p className="text-sm text-zinc-500">Frontend developer Intern</p>
             </div>
           </div>
@@ -44,9 +45,7 @@ const Experience = () => {
 
       {/* details about contributions */}
       <div className="bg-zinc-900 px-3 text-zinc-500">
-        <h1 className="shimmer mt-3 text-zinc-500 text-xl font-serif font-medium tracking-tight overflow-hidden shine py-2">
-          Technical Contributions
-        </h1>
+        <AnimatedShimmerText text="Technical Contributions" />
         <p className="text-sm py-2">
           <span className="text-white">At Elecon</span>, I contributed to the
           Quoteflow project, <span className="text-white">working across the frontend, backend, and database
