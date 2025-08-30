@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
+import AnimatedShimmerText from "./AnimatedShimmerText";
 
 const techStack = [
   // Languages
@@ -98,7 +99,6 @@ const techStack = [
     category: "css-framework",
     icon: "/tech-icons/tailwindcss.svg",
   },
-
   // Tools
   {
     id: 15,
@@ -111,19 +111,26 @@ const techStack = [
 const TechStack = () => {
   return (
     <div className="w-full bg-background">
+      <div className="px-3">
+      <AnimatedShimmerText text="Tools & Technologies" />
+      </div>
       <div className=" px-3 flex justify-center">
         <Carousel
+        opts={{
+          loop : true
+        }}
           plugins={[
             Autoplay({
               delay: 2500, // Delay between slides (in ms)
               stopOnInteraction: false, // Keeps autoplay running after interaction
             }),
           ]}
-          className="w-full max-w-xs py-10"
+          className="w-full max-w-xl py-10"
         >
-          <CarouselContent>
+          <CarouselContent className="animate-marquee">
             {techStack.map(({ name, id, icon }) => (
-              <CarouselItem key={id} className="basis-1/6">
+              <CarouselItem key={id} className="px-4 md:basis-1/6 basis-1/4">
+                <div className="flex flex-col items-center">
                 <Image
                   src={icon}
                   alt={name}
@@ -132,6 +139,8 @@ const TechStack = () => {
                   className="object-contain"
                   unoptimized
                 />
+                <p className="text-sm text-zinc-500 pt-2">{name}</p>
+                </div>
               </CarouselItem>
             ))}
           </CarouselContent>

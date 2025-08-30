@@ -194,3 +194,20 @@
 				background-position: top right;
 		}
 }
+
+/* tech stack infinte smooth scrolling */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 28s linear infinite;
+  white-space: nowrap;
+}
