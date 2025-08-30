@@ -1,5 +1,6 @@
 import ContributionsGithub from "../components/ContributionsGithub"
 import Experience from "../components/Experience"
+import RecentContributions from "../components/RecentContributions"
 import TechStack from "../components/TechStackcarousal"
 import TopBanner from "../components/TopBanner"
 
@@ -11,6 +12,7 @@ const MainSection = () => {
         <ContributionsGithub username="DevPatel1023" 
         variant="compact" />
         <TechStack />
+        <RecentContributions />
     </div>
   )
 }
