@@ -17,7 +17,9 @@ const NavBar = () => {
             className="md:hidden
            inline-block"
           >
+            <Link href="/pow">
             POW
+            </Link>
           </span>
         </p>
         <p className="hover:text-zinc-100 transition-colors duration-300 hover:cursor-pointer">
