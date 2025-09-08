@@ -1,6 +1,7 @@
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import Image from "next/image"
-import { Github, Calendar } from "lucide-react"
+import { Calendar } from "lucide-react"
+import { FaGithub } from "react-icons/fa6"
 
 interface ProjectCardProps {
   title?: string
@@ -22,7 +23,7 @@ const ProjectCard = ({
   date = "2024",
 }: ProjectCardProps) => {
   return (
-    <Card className="group rounded-xl overflow-hidden transition-all duration-300 border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 hover:border-zinc-300 dark:hover:border-zinc-700 hover:shadow-md">
+    <Card className="w-90 md:w-120 group rounded-xl overflow-hidden transition-all duration-300 border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 hover:border-zinc-300 dark:hover:border-zinc-700 hover:shadow-md">
       {/* Project Image */}
       <CardContent className="p-0">
         <div className="relative overflow-hidden">
@@ -73,8 +74,8 @@ const ProjectCard = ({
             className="w-full inline-flex items-center justify-center gap-2 rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 px-3 py-2 text-sm font-medium transition-colors hover:bg-zinc-50 dark:hover:bg-zinc-700"
             aria-label="View source code on GitHub"
           >
-            <Github className="w-4 h-4" />
-            <span>View on GitHub</span>
+            <FaGithub  className="w-4 h-4" />
+            <span>View Code</span>
           </a>
         )}
       </CardFooter>
