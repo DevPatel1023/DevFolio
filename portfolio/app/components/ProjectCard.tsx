@@ -1,35 +1,28 @@
-import { Card, CardContent, CardFooter } from "@/components/ui/card"
-import Image from "next/image"
-import { Calendar } from "lucide-react"
-import { FaGithub } from "react-icons/fa6"
-
-interface ProjectCardProps {
-  title?: string
-  image?: string
-  imageAlt?: string
-  githubUrl?: string
-  liveUrl?: string
-  technologies?: string[]
-  date?: string
-}
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import Image from "next/image";
+import { Calendar } from "lucide-react";
+import { FaGithub } from "react-icons/fa6";
+import { ProjectCardProps } from "../types/Projectcardprops";
 
 const ProjectCard = ({
-  title = "Blogify",
-  image = "/projects/Blogify.png",
-  imageAlt = "Blogify project screenshot",
-  githubUrl = "https://github.com/DevPatel1023/blogify",
-  liveUrl = "https://blogify-demo.vercel.app",
-  technologies = ["Next.js", "TypeScript", "Tailwind CSS", "Prisma"],
-  date = "2024",
+  title,
+  image,
+  imageAlt,
+  githubUrl,
+  technologies,
+  date,
 }: ProjectCardProps) => {
   return (
-    <Card className="w-90 md:w-120 group rounded-xl overflow-hidden transition-all duration-300 border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 hover:border-zinc-300 dark:hover:border-zinc-700 hover:shadow-md">
+    <Card className="max-w-90 md:max-w-120 group rounded-xl overflow-hidden transition-all duration-300 border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 hover:border-zinc-300 dark:hover:border-zinc-700 hover:shadow-md">
       {/* Project Image */}
       <CardContent className="p-0">
         <div className="relative overflow-hidden">
           <Image
-            src={image || "/placeholder.svg?height=192&width=500&query=project%20image"}
-            alt={imageAlt}
+            src={
+              image ||
+              "/placeholder.svg?height=192&width=500&query=project%20image"
+            }
+            alt={imageAlt || "Project Image"}
             width={500}
             height={500}
             className="w-full h-48 object-cover"
@@ -53,7 +46,7 @@ const ProjectCard = ({
       {/* Technologies */}
       <div className="px-6 py-3">
         <div className="flex flex-wrap gap-2">
-          {technologies.map((tech, index) => (
+          {technologies?.map((tech, index) => (
             <span
               key={index}
               className="px-2 py-1 text-xs font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 rounded-md"
@@ -74,13 +67,13 @@ const ProjectCard = ({
             className="w-full inline-flex items-center justify-center gap-2 rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 px-3 py-2 text-sm font-medium transition-colors hover:bg-zinc-50 dark:hover:bg-zinc-700"
             aria-label="View source code on GitHub"
           >
-            <FaGithub  className="w-4 h-4" />
+            <FaGithub className="w-4 h-4" />
             <span>View Code</span>
           </a>
         )}
       </CardFooter>
     </Card>
-  )
-}
+  );
+};
 
-export default ProjectCard
+export default ProjectCard;
