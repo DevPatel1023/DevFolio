@@ -12,7 +12,7 @@ const NavBar = () => {
       {/*  Right side */}
       <div className="flex justify-between gap-3 right-2 text-zinc-500 ease-in-out">
         <p className="hover:text-zinc-100 transition-colors duration-300 hover:cursor-pointer">
-          <span className="hidden md:inline-block">proof-of-work</span>
+          <Link href="/pow"><span className="hidden md:inline-block">proof-of-work</span></Link>
           <span
             className="md:hidden
            inline-block"
