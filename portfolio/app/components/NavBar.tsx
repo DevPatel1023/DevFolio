@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 const NavBar = () => {
-  return (
-    <div className="sticky top-0 z-50 backdrop-blur-xl bg-card/10 border-b border-gray-600 px-3 pt-4 flex justify-between h-15 ">
+    return (
+      <div className="sticky top-0 z-50 backdrop-blur-xl bg-card/10 border-b border-gray-600 px-3 pt-4 flex justify-between h-15 w-full">
       {/* left side */}
       <div>
         <h1 className="font-normal text-xl hover:text-zinc-300 transition-colors duration-300 hover:underline hover:cursor-pointer">
