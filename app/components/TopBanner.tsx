@@ -166,12 +166,12 @@ const TopBanner = () => {
           `}
         >
           <p className="text-zinc-500 pb-3">
-            Full Stack Developer | AI Enthusiast
+            Full Stack Developer {"|"} AI Enthusiast
           </p>
           <p>
             Building digital products with a problem-first mindset —{" "}
             <span className="text-zinc-500">
-              using structured thinking and modern tools to craft clean,
+              using structured thinking and modern tools to craft clean{","}
               scalable solutions
             </span>
           </p>
@@ -196,7 +196,7 @@ const TopBanner = () => {
           <AnimatedShimmerText text="Introduction" />
           <div className="space-y-2">
             <p className="text-zinc-500 text-sm">
-              I'm an average developer who writes code —
+              {"I'm"} an average developer who writes code —
               <span className="text-white">
                 {" "}
                 but what sets me apart is how I approach problems
@@ -209,14 +209,14 @@ const TopBanner = () => {
               .
             </p>
             <p className="text-zinc-500 text-sm">
-              I'm actively learning and applying AI to build smarter, more
+              {"I'm"} actively learning and applying AI to build smarter, more
               adaptive features that enhance both user experience and
               functionality.
             </p>
             <p className="text-zinc-500 text-sm">
               I work across the entire development lifecycle —{" "}
               <span className="text-white">from design to deployment </span>—
-              and I don't stop there. I believe in continuously monitoring,
+              and I {"don't"} stop there. I believe in continuously monitoring,
               refining, and evolving products to keep them aligned with
               real-world needs.
             </p>
