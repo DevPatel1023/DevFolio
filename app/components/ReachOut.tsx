@@ -4,10 +4,7 @@ import AnimatedShimmerText from "./AnimatedShimmerText";
 import { FaLinkedin, FaXTwitter, FaGithub, FaPaperclip } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
+  Card, 
 } from "@/components/ui/card";
 
 interface ReachOutProps {
